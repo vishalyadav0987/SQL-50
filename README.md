@@ -48,14 +48,7 @@ WHERE LENGTH(T.content) > 15;
 
 ---
 
-### 1757. Recyclable and Low Fat Products
-```bash
-SELECT product_id 
-FROM  Products
-WHERE low_fats = 'Y' AND recyclable = 'Y';
-```
 
----
 
 ## ``Basic Joins``
 
@@ -216,6 +209,9 @@ ORDER BY c.rating DESC;
 ```
 
 ---
+
+
+
 ### 1251. Average Selling Price
 ```bash
 SELECT P.product_id AS product_id,
@@ -233,6 +229,9 @@ GROUP BY P.product_id
 ```
 
 ---
+
+
+
 ### 1075. Project Employees I
 ```bash
 SELECT P.project_id, 
@@ -244,6 +243,8 @@ SELECT P.project_id,
 ```
 
 ---
+
+
 ### 1633. Percentage of Users Attended a Contest
 ```bash
 SELECT
@@ -257,6 +258,8 @@ ORDER BY percentage DESC ,contest_id ASC
 ```
 
 ---
+
+
 ### 1211. Queries Quality and Percentage
 ```bash
 SELECT 
@@ -268,6 +271,8 @@ GROUP BY q.query_name;
 ```
 
 ---
+
+
 ### 1193. Monthly Transactions I
 ```bash
 SELECT 
