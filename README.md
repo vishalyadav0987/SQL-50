@@ -766,7 +766,18 @@ WHERE T1.tiv_2015 in (
 
 ### Department Top Three Salaries
 ```
-
+SELECT D.name AS Department,
+    E.name AS Employee,
+    E.salary AS Salary
+FROM Employee E
+INNER JOIN Department D
+ON E.departmentId = D.id
+WHERE 3 > (
+    SELECT COUNT(DISTINCT salary) 
+    FROM Employee 
+    WHERE salary > E.salary
+    AND departmentId = E.departmentId
+)
 ```
 
 ---
